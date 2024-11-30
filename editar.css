@@ -1,0 +1,101 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f8f9fa; /* Fundo claro */
+}
+
+/* Barra lateral */
+.sidebar {
+    background-color: #3a7ca5; /* Azul tranquilo */
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    width: 250px;
+    top: 0;
+    left: 0;
+}
+
+.sidebar h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.sidebar p {
+    font-size: 14px;
+}
+
+/* Conteúdo principal */
+.main-content {
+    margin-left: 270px;
+    padding: 20px;
+}
+
+/* Container do formulário */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Estrutura das linhas e colunas */
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.input-column {
+    flex: 1;
+}
+
+/* Labels e Inputs */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Botão de envio */
+.submit-button {
+    background-color: #3a7ca5; /* Azul tranquilo */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.submit-button:hover {
+    background-color: #2d6788; /* Azul mais escuro */
+}
+
+/* Estilo para o link de voltar */
+a.voltar {
+    position: absolute; /* Posiciona o botão na parte inferior */
+    bottom: 20px; /* 20px do fundo da tela */
+    left: 20px; /* Alinhado à esquerda */
+    font-size: 1rem;
+    color: #007bff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid #007bff;
+    border-radius: 8px;
+    background-color: white;
+    transition: background-color 0.3s ease;
+}

@@ -1,0 +1,151 @@
+/* Resetando alguns estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6; /* Cor de fundo suave */
+    display: flex;
+    justify-content: flex-start; /* Alinhamento à esquerda para que a barra lateral fique fixada */
+    min-height: 100vh; /* Altura total da tela */
+    position: relative; /* Necessário para posicionar o botão de forma absoluta */
+}
+
+/* Estilo da barra lateral */
+.sidebar {
+    width: 250px; /* Barra lateral mais estreita */
+    height: 100vh; /* Ocupa toda a altura da tela */
+    background-color: #3a7ca5; /* Cor de fundo azul tranquilo */
+    color: white;
+    padding: 20px;
+    position: fixed; /* Fixa a barra lateral na tela */
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.sidebar p {
+    font-size: 14px;
+}
+
+/* Estilo do conteúdo principal */
+.main-content {
+    margin-left: 270px; /* Ajusta o espaço para acomodar a barra lateral */
+    width: calc(100% - 270px); /* Preenche o resto da tela */
+    padding: 40px;
+    background-color: #fff; /* Fundo branco do formulário */
+    border-radius: 12px; /* Borda arredondada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    min-height: 100vh; /* Garantir que o conteúdo principal ocupe toda a altura */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Estilo para os rótulos (labels) */
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #444;
+    display: block;
+    margin-bottom: 8px; /* Distância entre o rótulo e o campo */
+    text-align: left; /* Centraliza os rótulos */
+}
+
+/* Estilo dos campos de entrada */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="time"] {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Bordas arredondadas */
+    transition: all 0.3s ease;
+    width: 100%; /* Campo ocupa toda a largura da coluna */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Efeito de foco nos campos de entrada */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus {
+    border-color: #3a7ca5; /* Cor azul tranquilo ao focar */
+    outline: none;
+}
+
+/* Estilo do botão de envio */
+button {
+    padding: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #3a7ca5; /* Cor azul tranquilo do botão */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 62%; /* Agora o botão ocupa 100% da largura do formulário */
+}
+
+button:hover {
+    background-color: #2d6788; /* Azul um pouco mais escuro no hover */
+}
+
+/* Estilo para o link de voltar */
+a.voltar {
+    position: absolute; /* Posiciona o botão na parte inferior */
+    bottom: 20px; /* 20px do fundo da tela */
+    left: 20px; /* Alinhado à esquerda */
+    font-size: 1rem;
+    color: #007bff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid #007bff;
+    border-radius: 8px;
+    background-color: white;
+    transition: background-color 0.3s ease;
+}
+
+a.voltar:hover {
+    background-color: #f1f1f1;
+    color: #0056b3;
+}
+
+/* Estilo das colunas no formulário */
+.container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Faz com que as colunas se ajustem conforme necessário */
+    justify-content: center; /* Centraliza as colunas no centro da tela */
+}
+
+/* Coluna do formulário */
+.column {
+    flex: 1;
+    min-width: 280px; /* Tamanho mínimo para cada coluna */
+    max-width: 400px; /* Limite máximo para evitar que o formulário fique largo demais */
+}
+
+/* Estilo do formulário */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Alinha os campos ao centro */
+    width: 100%;
+}

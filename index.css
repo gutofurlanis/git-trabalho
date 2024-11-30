@@ -1,0 +1,150 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f8ff; /* Azul claro suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura total da tela */
+    width: 100vw; /* Largura total da tela */
+    margin: 0;
+    overflow: hidden; /* Remove barras de rolagem */
+}
+
+/* Container principal */
+.container {
+    display: flex; /* Layout lado a lado */
+    flex-direction: row; /* Itens horizontalmente alinhados */
+    width: 100%; /* Ocupa toda a largura */
+    height: 100%; /* Ocupa toda a altura */
+    background-color: #ffffff;
+}
+
+/* Lado esquerdo - Imagem */
+.image-container {
+    flex: 1.2; /* Ocupa metade do espaço */
+    display: flex; /* Centraliza a imagem */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: #f4f4f4; /* Cor de fundo neutra */
+}
+
+.image-container img {
+    width: 100%; /* Aumenta a largura da imagem */
+    height: 100%; /* Aumenta a altura da imagem */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem deformar */
+    max-width: none; /* Remove restrições de largura */
+    max-height: none; /* Remove restrições de altura */
+}
+
+/* Lado direito - Formulário */
+.form-container {
+    flex: 1; /* Ocupa metade do espaço */
+    padding: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente o formulário */
+    align-items: center; /* Centraliza horizontalmente */
+}
+
+h1 {
+    color: #007bff; /* Azul calmo */
+    margin-bottom: 20px;
+    font-size: 2rem; /* Aumenta o tamanho do título */
+}
+
+p {
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 1.1rem; /* Aumenta o tamanho do texto */
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+    width: 100%; /* Garante que os inputs ocupem toda a largura */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+input {
+    width: 100%; /* Inputs ocupam toda a largura */
+    padding: 15px; /* Aumenta o tamanho do campo */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem; /* Aumenta o texto do input */
+}
+
+input:focus {
+    border-color: #007bff; /* Azul para o foco */
+    outline: none;
+}
+
+.btn-login {
+    background-color: #007bff; /* Azul calmo */
+    color: #fff;
+    padding: 15px 20px; /* Aumenta o botão */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.2rem; /* Aumenta o texto do botão */
+    margin-top: 20px;
+}
+
+.btn-login:hover {
+    background-color: #0056b3; /* Azul mais escuro no hover */
+}
+
+.footer-text {
+    margin-top: 15px;
+    font-size: 1rem; /* Ajusta o tamanho do texto */
+    color: #555;
+}
+
+.footer-text a {
+    color: #007bff; /* Azul para links */
+    text-decoration: none;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Alinha os itens verticalmente */
+    }
+
+    .image-container {
+        height: 50%; /* Metade da altura */
+        width: 100%; /* Largura total */
+    }
+
+    .form-container {
+        height: 50%; /* Outra metade da altura */
+        width: 100%; /* Largura total */
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Reduz o tamanho do título */
+    }
+
+    .btn-login {
+        font-size: 1rem; /* Ajusta o botão em telas menores */
+    }
+}
